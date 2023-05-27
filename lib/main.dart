@@ -9,39 +9,36 @@ void main() {
 class MeuApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return   MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.deepOrange,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
             children: <Widget>[
-              Container(
-                width: 30.0,
-                color: Colors.white,
-                child: Text('Container 1'),
+              CircleAvatar(
+                backgroundImage: AssetImage('imagens/foto.png'),
+                radius: 50.0,
               ),
-              SizedBox(
-                width: 20.0,
+              Text('Leonardo Santos da Mata',
+                style: TextStyle(fontSize: 25.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico'
+                ),
               ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
-                child: Text('Container 2'),
+              Text('Eu sou Desenvolvedor',
+                style: TextStyle(
+                    fontFamily: 'SourceSansPro',
+                    color: Colors.deepOrange.shade100,
+                    fontSize: 20.0,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold,
+                ),
               ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                width: 100.0,
-                color: Colors.red,
-                child: Text('Container 3'),
-              ),
-
-            ],),
+            ],
+          ),
         ),
       ),
     );
   }
 }
-
